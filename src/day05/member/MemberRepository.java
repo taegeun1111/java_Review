@@ -1,8 +1,15 @@
 package day05.member;
 
+import java.util.Arrays;
+
 // 회원 저장소 역할
 public class MemberRepository {
+    public static final int NOT_FOUND = -1;
+
     Member[] memberList;
+
+    //삭제된 회원 배열(휴지통)
+    Member[] removeMembers;
 
     public MemberRepository() {
         this.memberList = new Member[3];
@@ -64,14 +71,15 @@ public class MemberRepository {
     /*
      * 마지막 회원의 번호를 알려주는 기능
      */
-    int getLastMemberId(){
-        return memberList[memberList.length-1].memberId;
+    int getLastMemberId() {
+        return !isEmpty() ? memberList[memberList.length - 1].memberId : 0;
     }
 
     /**
      * 이메일을 통해 특정 회원 객체를 찾아서 반환하는 기능
-     * @param1 email : 찾고 싶은 회원의 이메일
+     *
      * @return : 찾은 회원의 객체정보, 못찾으면 null반환
+     * @param1 email : 찾고 싶은 회원의 이메일
      */
     Member findByEmail(String email) {
         for (Member m : memberList) {
@@ -81,4 +89,61 @@ public class MemberRepository {
         }
         return null;
     }
+
+    /**
+     * 이메일을 통해 저장된 회원의 인덱스값을 알아내는 메서드
+     *
+     * @param email - 탐색 대상의 이메일
+     * @return : 찾아낸 인데스, 못찾으면 -1
+     */
+    int findIndexByEmail(String email) {
+        for (int i = 0; i < memberList.length; i++) {
+            if (memberList[i].email.equals(email))
+                return i;
+        }
+        return NOT_FOUND;
+    }
+
+    /**
+     * 비밀번호를 수정하는 기능
+     *
+     * @param email       : 수정 대상의 이메일
+     * @param newPassword : 변경할 새로운 비밀번호
+     */
+    boolean changePassword(String email, String newPassword) {
+        int index = findIndexByEmail(email);
+        //수정진행
+        if (index != NOT_FOUND) return false;
+
+        memberList[index].password = newPassword;
+        return true;
+
+    }
+
+    /**
+     * 회원정보 삭제
+     */
+    void removeMember(String email) {
+        // 인덱스 찾기
+        int delIndex = findIndexByEmail(email);
+
+        // 앞으로 땡기기
+        for (int i = delIndex; i < memberList.length - 1; i++) {
+            memberList[i] = memberList[i + 1];
+        }
+
+        // 배열 마지막 칸 없애기
+        Member[] temp = new Member[memberList.length - 1];
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = memberList[i];
+        }
+        memberList = temp;
+    }
+
+    //멤버가 비었는지 확인
+    boolean isEmpty(){
+        return memberList.length ==0;
+    }
+
+
 }
