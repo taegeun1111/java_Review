@@ -27,25 +27,22 @@ public class ArrayPushQuiz {
 
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
+        while (true){
+            System.out.println(">> ");
+            String newFood =sc.nextLine();
 
-            System.out.print(">> ");
-            String newFood = sc.nextLine();
+            if(newFood.equals("그만")) break;
 
-            if (newFood.equals("그만")) break;
-
-            String[] temp = new String[foodList.length + 1];
+            String[] temp = new String[foodList.length+1];
             for (int i = 0; i < foodList.length; i++) {
-                temp[i] = foodList[i];
+             temp[i]= foodList[i];
             }
-            temp[temp.length - 1] = newFood;
-            foodList = temp;
-            temp = null;
-
+            temp[temp.length-1] = newFood;
+            foodList=temp;
+            temp=null;
         }
 
-        System.out.println("먹고 싶은 음식리스트: " + Arrays.toString(foodList));
-
+        System.out.println("먹고싶은 음식 리스트 : "+Arrays.toString(foodList));
     }
 
 }

@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b872ce2-4d43-4fe9-85e6-f1310087279c" name="Changes" comment="20230403_ver1">
+    <list default="true" id="6b872ce2-4d43-4fe9-85e6-f1310087279c" name="Changes" comment="20230403_ver2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day05/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day05/member/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day05/member/MemberView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day05/member/MemberView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day05/member/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day05/member/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day02/ArrayBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02/ArrayBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day02/ArrayCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02/ArrayCopy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day02/ArrayPop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02/ArrayPop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day02/ArrayPush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02/ArrayPush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day02/ArrayPushQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02/ArrayPushQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/ArrayDelete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/ArrayInsert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/ArraySearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/ArraySearchQuiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/Matrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/MethodBasic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03/MethodQuiz.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +65,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/java_study_04-master",
+    "last_opened_file_path": "/Users/taegeun/java_basic/src",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="day05.member" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -72,13 +84,13 @@
       <recent name="juice" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.day06.encap.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day04.Array.Main" />
+  <component name="RunManager" selected="애플리케이션.ArrayDelete">
+    <configuration name="ArrayBasic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day02.ArrayBasic" />
       <module name="java_basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day04.Array.*" />
+          <option name="PATTERN" value="day02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day05.member.Test" />
+    <configuration name="ArrayCopy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day02.ArrayCopy" />
       <module name="java_basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day05.member.*" />
+          <option name="PATTERN" value="day02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="day05.member.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day05.member.Main" />
+    <configuration name="ArrayDelete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day03.ArrayDelete" />
       <module name="java_basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day05.member.*" />
+          <option name="PATTERN" value="day03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +124,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="day06.encap.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day06.encap.Main" />
+    <configuration name="ArrayPop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day02.ArrayPop" />
       <module name="java_basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.encap.*" />
+          <option name="PATTERN" value="day02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +137,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day05.main" />
+    <configuration name="ArrayPush" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day02.ArrayPush" />
       <module name="java_basic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day05.*" />
+          <option name="PATTERN" value="day02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.day06.encap.Main" />
-        <item itemvalue="애플리케이션.day05.member.Main" />
-        <item itemvalue="애플리케이션.Test" />
-        <item itemvalue="애플리케이션.main" />
-        <item itemvalue="애플리케이션.Main" />
+        <item itemvalue="애플리케이션.ArrayDelete" />
+        <item itemvalue="애플리케이션.ArrayPop" />
+        <item itemvalue="애플리케이션.ArrayPush" />
+        <item itemvalue="애플리케이션.ArrayCopy" />
+        <item itemvalue="애플리케이션.ArrayBasic" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680498553216</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20230403_ver2">
+      <created>1680526255493</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680526255493</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +251,8 @@
     <MESSAGE value="20230330_ver2" />
     <MESSAGE value="20230331_ver1" />
     <MESSAGE value="20230403_ver1" />
-    <option name="LAST_COMMIT_MESSAGE" value="20230403_ver1" />
+    <MESSAGE value="20230403_ver2" />
+    <option name="LAST_COMMIT_MESSAGE" value="20230403_ver2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
