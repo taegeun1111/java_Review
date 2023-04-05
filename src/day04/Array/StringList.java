@@ -6,15 +6,15 @@ import java.util.Arrays;
 public class StringList {
 
     // 필드
-    String[] sArr;
+    private String[] sArr;
 
     // 생성자
-    StringList() {
+    public StringList() {
         System.out.println("생성자 호출");
         sArr = new String[0];
     }
 
-    StringList(String... initData) {
+    public StringList(String... initData) {
         sArr = new String[initData.length];
         for (int i = 0; i < sArr.length; i++) {
             sArr[i] = initData[i];
@@ -24,12 +24,12 @@ public class StringList {
 
     // 메서드
     // 배열에 저장된 데이터 수를 알려주는 기능
-    int size() {
+    public int size() {
         return sArr.length;
     }
 
     // 배열에 맨 끝에 데이터를 추가하는 기능
-    void push(String newData) {
+    public void push(String newData) {
         String[] temp = new String[sArr.length + 1];
         for (int i = 0; i < sArr.length; i++) {
             temp[i] = sArr[i];
@@ -39,7 +39,7 @@ public class StringList {
     }
 
     // 배열 맨 끝 데이터 삭제하는 기능
-    String pop() {
+    public String pop() {
         String deleteTarget = sArr[sArr.length - 1];
         String[] temp = new String[sArr.length - 1];
         for (int i = 0; i < temp.length; i++) {
@@ -60,7 +60,7 @@ public class StringList {
     }
 
     //배열 데이터 전체삭제
-    void clear(){
+    public void clear(){
         sArr = new String[0];
     }
 
@@ -71,4 +71,9 @@ public class StringList {
     //중간 삭제(remove)
 
     //중간 삽입(insert)
+
+
+    public String[] getsArr() {
+        return sArr;
+    }
 }
