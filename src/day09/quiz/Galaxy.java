@@ -47,4 +47,9 @@ public class Galaxy extends SmartPhone implements Pencil {
     public String touchDisplay() {
         return "정전식, 와콤펜 지원";
     }
+
+    @Override
+    public void test() {
+
+    }
 }

@@ -1,6 +1,6 @@
 package day09.quiz;
 
-public abstract class SmartPhone implements Camera, PhoneCall, Touchable{
+public abstract class SmartPhone implements Camera, PhoneCall, Touchable, phonecallPencil{
     private String model;
 
     public SmartPhone(String model) {

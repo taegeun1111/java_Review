@@ -16,8 +16,8 @@ public class Main {
         StringList newdata = new StringList("홍길동","김철수");
         newdata.push("이정현");
         newdata.push("강현우");
-        newdata.clear();
-        System.out.println(newdata.isEmpty());
+//        newdata.clear();
+//        System.out.println(newdata.isEmpty());
 
         System.out.println(newdata.toString());
 

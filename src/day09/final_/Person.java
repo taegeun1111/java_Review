@@ -6,10 +6,6 @@ class SmartBagPack extends BagPack {
         super(size, brand);
     }
 
-//    void putItem() {
-//
-//    }
-
     @Override
     void getItem() {
         super.getItem();

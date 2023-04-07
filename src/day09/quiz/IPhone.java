@@ -41,4 +41,14 @@ public class IPhone extends SmartPhone {
     public String touchDisplay() {
         return "정전식";
     }
+
+    @Override
+    public boolean bluetoothPen() {
+        return false;
+    }
+
+    @Override
+    public void test() {
+
+    }
 }
