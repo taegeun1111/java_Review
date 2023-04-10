@@ -2,6 +2,7 @@ package day10.song;
 
 import day04.Array.StringList;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -32,6 +33,7 @@ public class ArtistRepository {
         Artist artist = new Artist(artistName, new HashSet<>());
         artist.getSongList().add(songName);
 
+        autoSave();
         // 5. 가수배열에 해당 가수 객체 추가
         artistList.put(artist.getName(), artist);
     }
@@ -49,7 +51,9 @@ public class ArtistRepository {
     // 기존 가수 객체에 노래를 추가하는 기능
     public boolean addNewSong(String artistName, String songName) {
         Artist artist = findArtistByName(artistName);
-        return artist.getSongList().add(songName);
+        boolean flag = artist.getSongList().add(songName);
+        if (flag) autoSave();
+        return flag;
     }
 
     // 특정 가수의 노래목록을 반환하는 기능
@@ -61,5 +65,39 @@ public class ArtistRepository {
     public int count() {
         return artistList.size();
     }
+
+    //2023.04.10 자동 세이브 기능 추가
+    public void autoSave() {
+        File file = new File("/Users/taegeun/exercise/music");
+        //저장폴더 생성
+        if (!file.exists()) file.mkdir();
+
+        //저장파일 생성
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file + "/m.sav"))) {
+            oos.writeObject(artistList);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //2023.04.10 자동 로드 기능 추가
+    public static void loadFile(){
+        File f = new File("/Users/taegeun/exercise/music/m.sav");
+
+        if (f.exists()){
+            try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))){
+                artistList = (Map<String, Artist>) ois.readObject();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
 }
 

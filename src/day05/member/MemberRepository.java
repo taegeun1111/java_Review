@@ -1,5 +1,8 @@
 package day05.member;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 // 회원 저장소 역할
@@ -48,9 +51,25 @@ public class MemberRepository {
         for (int i = 0; i < memberList.length; i++) {
             temp[i] = memberList[i];
         }
+
+        //회원가입 시간 등록
+        newMember.regDate = LocalDate.now();
+
         temp[temp.length - 1] = newMember;
         memberList = temp;
 
+        //save파일 생성 기존 save파일에 유지하면서 데이터 추가(미완성 옛날에 썻던 방식)
+//        try (FileWriter fw = new FileWriter("/Users/taegeun/exercise/member.txt")) {
+//            String saveInfo = "";
+//            saveInfo += newMember.memberId;
+//            saveInfo += ","+newMember.email;
+//            saveInfo += ","+newMember.password;
+//            saveInfo += ","+newMember.gender;
+//            saveInfo += ","+newMember.age;
+//            fw.append(saveInfo + "\n");
+//        } catch (IOException e) {
+//            System.out.println("파일 저장 실패");
+//        }
         return true;
     }
 
@@ -141,8 +160,8 @@ public class MemberRepository {
     }
 
     //멤버가 비었는지 확인
-    boolean isEmpty(){
-        return memberList.length ==0;
+    boolean isEmpty() {
+        return memberList.length == 0;
     }
 
 

@@ -1,5 +1,7 @@
 package day05.member;
 
+import java.time.LocalDate;
+
 public class Member {
 
     int memberId;
@@ -8,6 +10,9 @@ public class Member {
     String memberName;
     Gender gender;
     int age;
+
+    //회원가입일
+    LocalDate regDate;
 
     public Member(int memberId, String email, String password, String memberName, Gender gender, int age) {
         this.memberId = memberId;

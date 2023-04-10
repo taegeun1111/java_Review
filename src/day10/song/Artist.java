@@ -1,9 +1,10 @@
 package day10.song;
 
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class Artist {
+public class Artist implements Serializable {
 
     private String name;  // 가수 이름
     private Set<String> songList; // 노래 목록
