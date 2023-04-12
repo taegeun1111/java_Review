@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Member {
 
-    int memberId;
-    String email;
-    String password;
-    String memberName;
-    Gender gender;
-    int age;
-
+    public int memberId;
+    public String email;
+    public String password;
+    public String memberName;
+    public Gender gender;
+    public int age;
+    public Member member;
     //회원가입일
     LocalDate regDate;
 

@@ -70,10 +70,10 @@ public class FilterApple {
      * @solution - try4 : 제네릭 필터 메서드 생성
      */
     //리턴타입에 제네릭 표시를 사용하면 반드시 그 앞에 제네릭 타입을 붙여야 한다.
-    public static <T> List<T> filter(List<T> basket, GenericPredicate p){
+    public static <T> List<T> filter(List<T> basket, GenericPredicate<T> p){
         List<T> filterList = new ArrayList<>();
         for(T t : basket){
-            if(p.test(p)){
+            if(p.test(t)){
                 filterList.add(t);
             }
         }
