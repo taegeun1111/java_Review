@@ -45,7 +45,7 @@ public class MapExample {
         //Map은 iterable이 없어서 foreach가 안된다.
         //cmd Map으로 확인가능
         //map.KeySet()은 String을 반환하기 때문에 foreach가능
-        //for(Object test : map){}
+        //for(Object test.test : map){}
         for(String key : map.keySet()){
             System.out.println("key = " + key);
             System.out.println("value = "+ map.get(key));

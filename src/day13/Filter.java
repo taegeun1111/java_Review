@@ -31,7 +31,7 @@ public class Filter {
                 List<Dish> filteredList = menuList.stream()
                 .filter(new Predicate<Dish>() {
                     @Override
-                    public boolean test(Dish dish) {
+                    public boolean test.test(Dish dish) {
                         return dish.isVegeterian();
                     }
                 })
