@@ -40,16 +40,18 @@ public class Main {
         cal1.color = "빨강";
         cal2.color = "초록";
 
-        out.println("cal1 = " + cal1.color);
-        Calculator sharp = new Calculator();
-        Calculator.calcAreaCircle(5);
+        out.println("cal1.color = " + cal1.color);
 
+        double v = Calculator.calcAreaCircle(5);
+        out.println("v = " + v);
+
+        Calculator sharp = new Calculator();
         sharp.paint("노랑");
+
 
         makeLine();
         makeLine();
         input("하하호호: ");
-
 
 
     }

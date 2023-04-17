@@ -30,7 +30,7 @@ public class SaveSnack {
      */
 
     private static void saveFile(){
-        try(FileOutputStream fos = new FileOutputStream(Path.ROOT_PATH+"/snack.txt")){
+        try(FileOutputStream fos = new FileOutputStream(Path.ROOT_PATH+"/123.txt")){
             //객체 저장을 위한 보조 스트림 사용
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(snackList);

@@ -84,4 +84,6 @@ public class test {
     }
 
 
+    public class categoryType {
+    }
 }
